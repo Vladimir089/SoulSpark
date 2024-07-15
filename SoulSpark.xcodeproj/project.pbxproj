@@ -9,21 +9,36 @@
 /* Begin PBXBuildFile section */
 		15BE2B472C42C08600F5A6E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE2B462C42C08600F5A6E2 /* AppDelegate.swift */; };
 		15BE2B492C42C08600F5A6E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE2B482C42C08600F5A6E2 /* SceneDelegate.swift */; };
-		15BE2B4B2C42C08600F5A6E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE2B4A2C42C08600F5A6E2 /* ViewController.swift */; };
 		15BE2B4E2C42C08600F5A6E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BE2B4C2C42C08600F5A6E2 /* Main.storyboard */; };
 		15BE2B502C42C08800F5A6E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BE2B4F2C42C08800F5A6E2 /* Assets.xcassets */; };
 		15BE2B532C42C08800F5A6E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BE2B512C42C08800F5A6E2 /* LaunchScreen.storyboard */; };
+		15BE2B5D2C42C16B00F5A6E2 /* OnbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE2B5C2C42C16B00F5A6E2 /* OnbViewController.swift */; };
+		15BE2B5F2C42C18800F5A6E2 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE2B5E2C42C18800F5A6E2 /* LoadViewController.swift */; };
+		15BE2B622C42CE8500F5A6E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 15BE2B612C42CE8500F5A6E2 /* SnapKit */; };
+		15BE2B652C42DC0F00F5A6E2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE2B642C42DC0E00F5A6E2 /* TabBarViewController.swift */; };
+		15BE2B682C42DC7800F5A6E2 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE2B672C42DC7800F5A6E2 /* TeamViewController.swift */; };
+		15EB911C2C4540E600D9EC10 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB911B2C4540E600D9EC10 /* Model.swift */; };
+		15EB911E2C45482A00D9EC10 /* NewEditTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB911D2C45482A00D9EC10 /* NewEditTeamViewController.swift */; };
+		15EB91202C456E5400D9EC10 /* NewPlayerInTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB911F2C456E5400D9EC10 /* NewPlayerInTeamViewController.swift */; };
+		15EB91222C45C9EC00D9EC10 /* DetailTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB91212C45C9EC00D9EC10 /* DetailTeamViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15BE2B432C42C08600F5A6E2 /* SoulSpark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoulSpark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BE2B462C42C08600F5A6E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15BE2B482C42C08600F5A6E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15BE2B4A2C42C08600F5A6E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15BE2B4D2C42C08600F5A6E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15BE2B4F2C42C08800F5A6E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15BE2B522C42C08800F5A6E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15BE2B542C42C08800F5A6E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BE2B5C2C42C16B00F5A6E2 /* OnbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbViewController.swift; sourceTree = "<group>"; };
+		15BE2B5E2C42C18800F5A6E2 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		15BE2B642C42DC0E00F5A6E2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		15BE2B672C42DC7800F5A6E2 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		15EB911B2C4540E600D9EC10 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		15EB911D2C45482A00D9EC10 /* NewEditTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditTeamViewController.swift; sourceTree = "<group>"; };
+		15EB911F2C456E5400D9EC10 /* NewPlayerInTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerInTeamViewController.swift; sourceTree = "<group>"; };
+		15EB91212C45C9EC00D9EC10 /* DetailTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTeamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BE2B622C42CE8500F5A6E2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +72,62 @@
 		15BE2B452C42C08600F5A6E2 /* SoulSpark */ = {
 			isa = PBXGroup;
 			children = (
-				15BE2B462C42C08600F5A6E2 /* AppDelegate.swift */,
-				15BE2B482C42C08600F5A6E2 /* SceneDelegate.swift */,
-				15BE2B4A2C42C08600F5A6E2 /* ViewController.swift */,
-				15BE2B4C2C42C08600F5A6E2 /* Main.storyboard */,
-				15BE2B4F2C42C08800F5A6E2 /* Assets.xcassets */,
-				15BE2B512C42C08800F5A6E2 /* LaunchScreen.storyboard */,
+				15EB911A2C4540DC00D9EC10 /* Model */,
+				15BE2B662C42DC1200F5A6E2 /* Teams */,
+				15BE2B632C42DBDD00F5A6E2 /* TabBar */,
+				15BE2B5B2C42C11700F5A6E2 /* Onb */,
+				15BE2B5A2C42C10900F5A6E2 /* Support */,
 				15BE2B542C42C08800F5A6E2 /* Info.plist */,
 			);
 			path = SoulSpark;
+			sourceTree = "<group>";
+		};
+		15BE2B5A2C42C10900F5A6E2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				15BE2B482C42C08600F5A6E2 /* SceneDelegate.swift */,
+				15BE2B4F2C42C08800F5A6E2 /* Assets.xcassets */,
+				15BE2B512C42C08800F5A6E2 /* LaunchScreen.storyboard */,
+				15BE2B4C2C42C08600F5A6E2 /* Main.storyboard */,
+				15BE2B462C42C08600F5A6E2 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		15BE2B5B2C42C11700F5A6E2 /* Onb */ = {
+			isa = PBXGroup;
+			children = (
+				15BE2B5C2C42C16B00F5A6E2 /* OnbViewController.swift */,
+				15BE2B5E2C42C18800F5A6E2 /* LoadViewController.swift */,
+			);
+			path = Onb;
+			sourceTree = "<group>";
+		};
+		15BE2B632C42DBDD00F5A6E2 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				15BE2B642C42DC0E00F5A6E2 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		15BE2B662C42DC1200F5A6E2 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				15BE2B672C42DC7800F5A6E2 /* TeamViewController.swift */,
+				15EB911D2C45482A00D9EC10 /* NewEditTeamViewController.swift */,
+				15EB911F2C456E5400D9EC10 /* NewPlayerInTeamViewController.swift */,
+				15EB91212C45C9EC00D9EC10 /* DetailTeamViewController.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		15EB911A2C4540DC00D9EC10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15EB911B2C4540E600D9EC10 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +146,9 @@
 			dependencies = (
 			);
 			name = SoulSpark;
+			packageProductDependencies = (
+				15BE2B612C42CE8500F5A6E2 /* SnapKit */,
+			);
 			productName = SoulSpark;
 			productReference = 15BE2B432C42C08600F5A6E2 /* SoulSpark.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 15BE2B3A2C42C08600F5A6E2;
+			packageReferences = (
+				15BE2B602C42CE8500F5A6E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 15BE2B442C42C08600F5A6E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15BE2B4B2C42C08600F5A6E2 /* ViewController.swift in Sources */,
+				15EB911E2C45482A00D9EC10 /* NewEditTeamViewController.swift in Sources */,
+				15EB911C2C4540E600D9EC10 /* Model.swift in Sources */,
+				15EB91202C456E5400D9EC10 /* NewPlayerInTeamViewController.swift in Sources */,
+				15BE2B5D2C42C16B00F5A6E2 /* OnbViewController.swift in Sources */,
+				15EB91222C45C9EC00D9EC10 /* DetailTeamViewController.swift in Sources */,
+				15BE2B682C42DC7800F5A6E2 /* TeamViewController.swift in Sources */,
 				15BE2B472C42C08600F5A6E2 /* AppDelegate.swift in Sources */,
+				15BE2B5F2C42C18800F5A6E2 /* LoadViewController.swift in Sources */,
+				15BE2B652C42DC0F00F5A6E2 /* TabBarViewController.swift in Sources */,
 				15BE2B492C42C08600F5A6E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,11 +370,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SoulSpark/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SoulSpark;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +383,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = k.SoulSpark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,11 +401,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SoulSpark/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SoulSpark;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +414,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = k.SoulSpark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,6 +445,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15BE2B602C42CE8500F5A6E2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15BE2B612C42CE8500F5A6E2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15BE2B602C42CE8500F5A6E2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15BE2B3B2C42C08600F5A6E2 /* Project object */;
 }
