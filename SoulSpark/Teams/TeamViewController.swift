@@ -26,8 +26,27 @@ class TeamViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         createInterface()
-        fillLabels()
         TeamArr = loadAthleteArrFromFile() ?? [Team]()
+        playersArr = loadAthleteArrFromFile() ?? [Players]()
+        fillLabels()
+    }
+    
+    
+    func loadAthleteArrFromFile() -> [Players]? {
+        let fileManager = FileManager.default
+        guard let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            print("Unable to get document directory")
+            return nil
+        }
+        let filePath = documentDirectory.appendingPathComponent("players.plist")
+        do {
+            let data = try Data(contentsOf: filePath)
+            let athleteArr = try JSONDecoder().decode([Players].self, from: data)
+            return athleteArr
+        } catch {
+            print("Failed to load or decode athleteArr: \(error)")
+            return nil
+        }
     }
     
 
@@ -248,7 +267,7 @@ extension TeamViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.layer.shadowOffset = CGSize(width: 0, height: 2)
             cell.layer.shadowRadius = 4
             cell.layer.masksToBounds = false
-            
+            collectionView.isUserInteractionEnabled = false
             let imageView = UIImageView(image: .noTeams)
             imageView.contentMode = .scaleAspectFit
             cell.addSubview(imageView)
@@ -280,7 +299,7 @@ extension TeamViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.layer.shadowRadius = 4
             cell.layer.masksToBounds = false
             cell.backgroundColor = .white
-            
+            collectionView.isUserInteractionEnabled = true
             
             let imageViewLogo = UIImageView(image: UIImage(data: TeamArr[indexPath.row].photo))
             imageViewLogo.backgroundColor = .systemGray5

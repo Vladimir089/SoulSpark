@@ -9,6 +9,7 @@ import UIKit
 
 protocol DetailTeamViewControllerDelegate: AnyObject {
     func reload()
+    func del()
 }
 
 class DetailTeamViewController: UIViewController {
@@ -286,6 +287,7 @@ extension DetailTeamViewController: UICollectionViewDelegate, UICollectionViewDa
             typeButton.backgroundColor = UIColor(red: 0/255, green: 71/255, blue: 255/255, alpha: 1)
             typeButton.layer.cornerRadius = 8
             typeButton.titleLabel?.textColor = .white
+            typeButton.titleLabel?.font = .systemFont(ofSize: 11, weight: .semibold)
             typeButton.setTitle(TeamArr[index].players[indexPath.row].role, for: .normal)
             typeButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             cell.addSubview(typeButton)
@@ -307,6 +309,10 @@ extension DetailTeamViewController: UICollectionViewDelegate, UICollectionViewDa
  
 
 extension DetailTeamViewController: DetailTeamViewControllerDelegate {
+    func del() {
+        self.dismiss(animated: true)
+    }
+    
     func reload() {
         reloadViews()
     }

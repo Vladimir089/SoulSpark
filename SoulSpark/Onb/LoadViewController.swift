@@ -79,7 +79,7 @@ class LoadViewController: UIViewController {
                 timer = nil
                 if isUser == true {
                     if UserDefaults.standard.object(forKey: "tab") != nil {
-                       // self.navigationController?.setViewControllers([TabBarViewController()], animated: true)
+                        self.navigationController?.setViewControllers([TabBarViewController()], animated: true)
                     } else {
                         self.navigationController?.setViewControllers([OnbViewController()], animated: true)
                     }

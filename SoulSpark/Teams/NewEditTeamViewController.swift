@@ -29,6 +29,7 @@ class NewEditTeamViewController: UIViewController, UIImagePickerControllerDelega
     //ui
     var mainCollection, playersCollectionView: UICollectionView?
     var logoImage: UIImage?
+    var saveButton: UIButton?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,10 +37,19 @@ class NewEditTeamViewController: UIViewController, UIImagePickerControllerDelega
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    func checkButton() {
+        if descriptionTextView?.text?.count ?? 0 > 0 , winsTextField?.text?.count ?? 0 > 0 , defeatsTextField?.text?.count ?? 0 > 0 , drawTextField?.text?.count ?? 0 > 0 , titleTextField?.text?.count ?? 0 > 0 {
+            saveButton?.isUserInteractionEnabled = true
+            saveButton?.alpha = 1
+        } else {
+            saveButton?.isUserInteractionEnabled = false
+            saveButton?.alpha = 0.5
+        }
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        delegate?.reload()
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -76,7 +86,6 @@ class NewEditTeamViewController: UIViewController, UIImagePickerControllerDelega
     
     func checIsNew() {
         if isNew == false {
-            print(234)
             logoImageView?.image = UIImage(data: TeamArr[index].photo)
             titleTextField?.text = TeamArr[index].name
             descriptionTextView?.text = TeamArr[index].description
@@ -84,6 +93,12 @@ class NewEditTeamViewController: UIViewController, UIImagePickerControllerDelega
             defeatsTextField?.text = TeamArr[index].defeats
             drawTextField?.text = TeamArr[index].draw
             playersArrNew = TeamArr[index].players
+            
+            saveButton?.isUserInteractionEnabled = true
+            saveButton?.alpha = 1
+        } else {
+            saveButton?.isUserInteractionEnabled = false
+            saveButton?.alpha = 0.5
         }
     }
     
@@ -135,20 +150,24 @@ class NewEditTeamViewController: UIViewController, UIImagePickerControllerDelega
             
         })
         
-        let saveButton: UIButton = {
+        saveButton = {
             let button = UIButton(type: .system)
             button.setTitle("Save", for: .normal)
             button.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
             button.setTitleColor(UIColor(red: 30/255, green: 171/255, blue: 78/255, alpha: 1), for: .normal)
             return button
         }()
-        view.addSubview(saveButton)
-        saveButton.snp.makeConstraints { make in
+        view.addSubview(saveButton!)
+        saveButton?.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(20)
             make.right.equalToSuperview().inset(15)
         }
-        saveButton.addTarget(self, action: #selector(saveTeam), for: .touchUpInside)
+        saveButton?.addTarget(self, action: #selector(saveTeam), for: .touchUpInside)
        
+        
+       
+        
+        
     }
     
     
@@ -165,6 +184,7 @@ class NewEditTeamViewController: UIViewController, UIImagePickerControllerDelega
             do {
                 let data = try JSONEncoder().encode(TeamArr) //тут мкассив конвертируем в дату
                 try saveAthleteArrToFile(data: data)
+                delegate?.reload()
                 self.dismiss(animated: true)
             } catch {
                 print("Failed to encode or save athleteArr: \(error)")
@@ -181,6 +201,18 @@ class NewEditTeamViewController: UIViewController, UIImagePickerControllerDelega
             } catch {
                 print("Failed to encode or save athleteArr: \(error)")
             }
+        }
+    }
+    
+    @objc func del() {
+        TeamArr.remove(at: index)
+        do {
+            let data = try JSONEncoder().encode(TeamArr) //тут мкассив конвертируем в дату
+            try saveAthleteArrToFile(data: data)
+            self.dismiss(animated: true)
+            editDelegate?.del()
+        } catch {
+            print("Failed to encode or save athleteArr: \(error)")
         }
     }
     
@@ -305,10 +337,39 @@ extension NewEditTeamViewController: UICollectionViewDelegate, UICollectionViewD
                     make.top.equalToSuperview()
                 })
                 
+                let delButton = UIButton(type: .system)
+               // delButton.backgroundColor = .red
+                delButton.setTitle("Delete     ", for: .normal)
+                delButton.alpha = 0
+                delButton.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+                delButton.setTitleColor(.red, for: .normal)
+                let imageViewDell = UIImageView(image: .del)
+                imageViewDell.contentMode = .scaleAspectFit
+                delButton.addSubview(imageViewDell)
+                imageViewDell.snp.makeConstraints { make in
+                    make.height.width.equalTo(24)
+                    make.right.centerY.equalToSuperview()
+                }
+                delButton.addTarget(self, action: #selector(del), for: .touchUpInside)
+                cell.addSubview(delButton)
+                delButton.snp.makeConstraints { make in
+                    make.height.equalTo(24)
+                    make.width.equalTo(100)
+                    make.centerX.equalToSuperview()
+                    make.top.equalTo(logoImageView!.snp.bottom).inset(-15)
+                }
+                
+                if isNew == false {
+                    delButton.alpha = 1
+                } else {
+                    delButton.alpha = 0
+                }
+               
+                
                 let titleText = createLabel(text: "Title")
                 cell.addSubview(titleText)
                 titleText.snp.makeConstraints { make in
-                    make.top.equalTo(logoImageView!.snp.bottom).inset(-20)
+                    make.top.equalTo(delButton.snp.bottom).inset(-5)
                     make.left.equalToSuperview().inset(15)
                 }
                 
@@ -517,6 +578,7 @@ extension NewEditTeamViewController: UICollectionViewDelegate, UICollectionViewD
                 typeButton.titleLabel?.textColor = .white
                 typeButton.setTitle(playersArrNew[indexPath.row].role, for: .normal)
                 typeButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                typeButton.titleLabel?.font = .systemFont(ofSize: 11, weight: .semibold)
                 cell.addSubview(typeButton)
                 typeButton.snp.makeConstraints { make in
                     make.height.equalTo(21)
@@ -554,6 +616,21 @@ extension NewEditTeamViewController: UICollectionViewDelegate, UICollectionViewD
 extension NewEditTeamViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        checkButton()
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        checkButton()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        checkButton()
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        checkButton()
     }
 }
 

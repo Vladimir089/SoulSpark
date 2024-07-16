@@ -11,14 +11,19 @@ class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        del() //УДАЛИТЬ
+
         settingsTab()
+        UserDefaults.standard.setValue(true, forKey: "tab")
     }
     
     func settingsTab() {
         let teamVC = TeamViewController()
         let teamVCTabItem = UITabBarItem(title: "", image: .tab1.resize(targetSize: CGSize(width: 24, height: 24)), tag: 0)
         teamVC.tabBarItem = teamVCTabItem
+        
+        let playerVC = PlayerViewController()
+        let playerVCTabItem = UITabBarItem(title: "", image: .tab2.resize(targetSize: CGSize(width: 24, height: 24)), tag: 0)
+        playerVC.tabBarItem = playerVCTabItem
         
         tabBar.unselectedItemTintColor = UIColor(red: 182/255, green: 198/255, blue: 252/255, alpha: 1)
         tabBar.tintColor = UIColor(red: 0/255, green: 71/255, blue: 255/255, alpha: 1)
@@ -31,26 +36,14 @@ class TabBarViewController: UITabBarController {
         tabBar.layer.shadowRadius = 4
         tabBar.layer.masksToBounds = false
         
-        viewControllers = [teamVC]
+        viewControllers = [teamVC, playerVC]
     }
     
     
   
     
     
-    func del() {  //ЭТО УДАЛИТЬ
-        let player1 = Players(photo: Data(), name: "1", age: "1", role: "1", matches: "1", goals: "1", fine: "1", descriptiion: "1")
-        let player2 = Players(photo: Data(), name: "2", age: "2", role: "2", matches: "2", goals: "2", fine: "2", descriptiion: "2")
-        let player3 = Players(photo: Data(), name: "3", age: "3", role: "3", matches: "3", goals: "3", fine: "3", descriptiion: "3")
-        let player4 = Players(photo: Data(), name: "4", age: "4", role: "4", matches: "4", goals: "4", fine: "4", descriptiion: "4")
-        let player5 = Players(photo: Data(), name: "5", age: "5", role: "5", matches: "5", goals: "5", fine: "5", descriptiion: "5")
-        playersArr.append(player1)
-        playersArr.append(player2)
-        playersArr.append(player3)
-        playersArr.append(player4)
-        playersArr.append(player5)
-        
-    }
+    
 }
 
 

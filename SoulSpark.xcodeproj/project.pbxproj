@@ -21,6 +21,9 @@
 		15EB911E2C45482A00D9EC10 /* NewEditTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB911D2C45482A00D9EC10 /* NewEditTeamViewController.swift */; };
 		15EB91202C456E5400D9EC10 /* NewPlayerInTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB911F2C456E5400D9EC10 /* NewPlayerInTeamViewController.swift */; };
 		15EB91222C45C9EC00D9EC10 /* DetailTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB91212C45C9EC00D9EC10 /* DetailTeamViewController.swift */; };
+		15EB91252C4693A500D9EC10 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB91242C4693A500D9EC10 /* PlayerViewController.swift */; };
+		15EB91272C46B65600D9EC10 /* NewAndEditPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB91262C46B65600D9EC10 /* NewAndEditPlayerViewController.swift */; };
+		15EB91292C46CD2C00D9EC10 /* DetailPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB91282C46CD2C00D9EC10 /* DetailPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		15EB911D2C45482A00D9EC10 /* NewEditTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEditTeamViewController.swift; sourceTree = "<group>"; };
 		15EB911F2C456E5400D9EC10 /* NewPlayerInTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerInTeamViewController.swift; sourceTree = "<group>"; };
 		15EB91212C45C9EC00D9EC10 /* DetailTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTeamViewController.swift; sourceTree = "<group>"; };
+		15EB91242C4693A500D9EC10 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		15EB91262C46B65600D9EC10 /* NewAndEditPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAndEditPlayerViewController.swift; sourceTree = "<group>"; };
+		15EB91282C46CD2C00D9EC10 /* DetailPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 		15BE2B452C42C08600F5A6E2 /* SoulSpark */ = {
 			isa = PBXGroup;
 			children = (
+				15EB91232C46939500D9EC10 /* Players */,
 				15EB911A2C4540DC00D9EC10 /* Model */,
 				15BE2B662C42DC1200F5A6E2 /* Teams */,
 				15BE2B632C42DBDD00F5A6E2 /* TabBar */,
@@ -128,6 +135,16 @@
 				15EB911B2C4540E600D9EC10 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		15EB91232C46939500D9EC10 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				15EB91242C4693A500D9EC10 /* PlayerViewController.swift */,
+				15EB91262C46B65600D9EC10 /* NewAndEditPlayerViewController.swift */,
+				15EB91282C46CD2C00D9EC10 /* DetailPlayerViewController.swift */,
+			);
+			path = Players;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +230,12 @@
 				15BE2B5D2C42C16B00F5A6E2 /* OnbViewController.swift in Sources */,
 				15EB91222C45C9EC00D9EC10 /* DetailTeamViewController.swift in Sources */,
 				15BE2B682C42DC7800F5A6E2 /* TeamViewController.swift in Sources */,
+				15EB91272C46B65600D9EC10 /* NewAndEditPlayerViewController.swift in Sources */,
 				15BE2B472C42C08600F5A6E2 /* AppDelegate.swift in Sources */,
 				15BE2B5F2C42C18800F5A6E2 /* LoadViewController.swift in Sources */,
 				15BE2B652C42DC0F00F5A6E2 /* TabBarViewController.swift in Sources */,
+				15EB91252C4693A500D9EC10 /* PlayerViewController.swift in Sources */,
+				15EB91292C46CD2C00D9EC10 /* DetailPlayerViewController.swift in Sources */,
 				15BE2B492C42C08600F5A6E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
