@@ -22,8 +22,12 @@ class TabBarViewController: UITabBarController {
         teamVC.tabBarItem = teamVCTabItem
         
         let playerVC = PlayerViewController()
-        let playerVCTabItem = UITabBarItem(title: "", image: .tab2.resize(targetSize: CGSize(width: 24, height: 24)), tag: 0)
+        let playerVCTabItem = UITabBarItem(title: "", image: .tab2.resize(targetSize: CGSize(width: 24, height: 24)), tag: 1)
         playerVC.tabBarItem = playerVCTabItem
+        
+        let settingsVC = SettingsViewController()
+        let settingsVCTabItem = UITabBarItem(title: "", image: .tab3.resize(targetSize: CGSize(width: 24, height: 24)), tag: 2)
+        settingsVC.tabBarItem = settingsVCTabItem
         
         tabBar.unselectedItemTintColor = UIColor(red: 182/255, green: 198/255, blue: 252/255, alpha: 1)
         tabBar.tintColor = UIColor(red: 0/255, green: 71/255, blue: 255/255, alpha: 1)
@@ -36,7 +40,7 @@ class TabBarViewController: UITabBarController {
         tabBar.layer.shadowRadius = 4
         tabBar.layer.masksToBounds = false
         
-        viewControllers = [teamVC, playerVC]
+        viewControllers = [teamVC, playerVC, settingsVC]
     }
     
     

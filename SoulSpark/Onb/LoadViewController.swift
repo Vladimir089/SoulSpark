@@ -67,7 +67,7 @@ class LoadViewController: UIViewController {
     func startProgress() {
         progress = 0
         progressLabel?.text = "\(progress)%"      //ПОРМЕНЯТЬ НА timeInterval: 0.07
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
     }
     
     @objc func updateProgress() {

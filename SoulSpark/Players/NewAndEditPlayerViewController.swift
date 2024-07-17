@@ -65,7 +65,7 @@ class NewAndEditPlayerViewController: UIViewController, UIImagePickerControllerD
             
             var index = 0
             
-            var role: String = player?.role ?? ""
+            let role: String = player?.role ?? ""
             
             for i in pickerArr {
                 if i == role  {

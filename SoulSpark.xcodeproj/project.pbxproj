@@ -24,6 +24,7 @@
 		15EB91252C4693A500D9EC10 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB91242C4693A500D9EC10 /* PlayerViewController.swift */; };
 		15EB91272C46B65600D9EC10 /* NewAndEditPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB91262C46B65600D9EC10 /* NewAndEditPlayerViewController.swift */; };
 		15EB91292C46CD2C00D9EC10 /* DetailPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB91282C46CD2C00D9EC10 /* DetailPlayerViewController.swift */; };
+		15EB912C2C47DCA100D9EC10 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EB912B2C47DCA100D9EC10 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		15EB91242C4693A500D9EC10 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		15EB91262C46B65600D9EC10 /* NewAndEditPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAndEditPlayerViewController.swift; sourceTree = "<group>"; };
 		15EB91282C46CD2C00D9EC10 /* DetailPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlayerViewController.swift; sourceTree = "<group>"; };
+		15EB912B2C47DCA100D9EC10 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		15BE2B452C42C08600F5A6E2 /* SoulSpark */ = {
 			isa = PBXGroup;
 			children = (
+				15EB912A2C47DC7200D9EC10 /* Settings */,
 				15EB91232C46939500D9EC10 /* Players */,
 				15EB911A2C4540DC00D9EC10 /* Model */,
 				15BE2B662C42DC1200F5A6E2 /* Teams */,
@@ -145,6 +148,14 @@
 				15EB91282C46CD2C00D9EC10 /* DetailPlayerViewController.swift */,
 			);
 			path = Players;
+			sourceTree = "<group>";
+		};
+		15EB912A2C47DC7200D9EC10 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				15EB912B2C47DCA100D9EC10 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 				15EB91272C46B65600D9EC10 /* NewAndEditPlayerViewController.swift in Sources */,
 				15BE2B472C42C08600F5A6E2 /* AppDelegate.swift in Sources */,
 				15BE2B5F2C42C18800F5A6E2 /* LoadViewController.swift in Sources */,
+				15EB912C2C47DCA100D9EC10 /* SettingsViewController.swift in Sources */,
 				15BE2B652C42DC0F00F5A6E2 /* TabBarViewController.swift in Sources */,
 				15EB91252C4693A500D9EC10 /* PlayerViewController.swift in Sources */,
 				15EB91292C46CD2C00D9EC10 /* DetailPlayerViewController.swift in Sources */,
